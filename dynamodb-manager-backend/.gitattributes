@@ -1,0 +1,6 @@
+# 秘密ファイルやローカル向けスクリプトは配布物から除外
+.env export-ignore
+.env.secret export-ignore
+.env.example export-ignore
+aws.sh export-ignore
+tf.sh export-ignore

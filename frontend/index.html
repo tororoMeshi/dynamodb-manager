@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynamoDB Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧾 DynamoDB Manager</h1>
+            <p>DynamoDBのテーブル構造を管理し、チームで知識を共有しましょう</p>
+        </header>
+
+        <main>
+            <div class="table-selector">
+                <label for="table-select">テーブル選択:</label>
+                <select id="table-select">
+                    <option value="">テーブルを選択してください</option>
+                </select>
+                <button id="refresh-tables">🔄 更新</button>
+            </div>
+
+            <div id="table-info" class="table-info hidden">
+                <h2 id="table-name"></h2>
+                
+                <div class="actions">
+                    <button id="show-sample" class="btn-secondary">サンプルデータを表示</button>
+                </div>
+
+                <div id="attributes-container" class="attributes-container">
+                    <h3>属性一覧</h3>
+                    <div id="attributes-list"></div>
+                </div>
+
+                <div id="sample-data" class="sample-data hidden">
+                    <h3>サンプルデータ</h3>
+                    <div id="sample-content"></div>
+                </div>
+            </div>
+        </main>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>読み込み中...</p>
+        </div>
+
+        <div id="error" class="error hidden">
+            <p id="error-message"></p>
+            <button id="close-error">閉じる</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
