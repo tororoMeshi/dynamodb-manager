@@ -264,10 +264,13 @@ severity-threshold = "high"
 allow = [
   "MIT",
   "Apache-2.0",
+  "Apache-2.0 OR MIT",
+  "MIT OR Apache-2.0",
   "BSD-2-Clause",
   "BSD-3-Clause",
   "ISC",
-  "Zlib"
+  "Zlib",
+  "Unicode-DFS-2016"
 ]
 unlicensed = "warn"
 copyleft = "warn"
